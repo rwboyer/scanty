@@ -24,7 +24,6 @@ class Scanty < Sinatra::Base
 		set :env, ENV['RACK_ENV']
 
 		Sequel.connect(ENV['DATABASE_URL'] || 'sqlite://blog.db')
-
 	end
 
 	error do
