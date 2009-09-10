@@ -1,5 +1,4 @@
-require 'rubygems'
-require 'sinatra/base'
+%w( rubygems sinatra/base haml ).each { |f| require f }
 
 $LOAD_PATH.unshift File.dirname(__FILE__) + '/vendor/sequel'
 
