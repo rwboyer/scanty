@@ -6,14 +6,14 @@
 		%link{:rel => 'stylesheet', :href => '/css/main.css', :type => 'text/css'}  
 		%link{:href => '/feed', :rel => 'alternate', :title => 'Primary Feed', :type => 'application/atom+xml'}
 	%body
-		%div#header
-			%div#logo2
+		#header
+			#logo2
 				%h1
 					%a{:href => '/'}= Blog.title
 				%p= "by #{Blog.author}"
-		%div#content
+		#content
 			= yield
-		%div#footer
+		#footer
 			%p#legal
 				= "Content by #{Blog.author} Design adpted from "
 				%a{:href => 'http://www.freecsstemplates.org/preview/replenish'} Replenish

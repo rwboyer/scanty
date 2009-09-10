@@ -6,14 +6,14 @@
 		%link{:rel => 'stylesheet', :href => 'css/main.css', :type => 'text/css'}  
 		%link{:href => '/feed', :rel => 'alternate', :title => 'Primary Feed', :type => 'application/atom+xml'}
 	%body
-		%div#header
-			%div#logo
+		#header
+			#logo
 				%h1
 					%a{:href => '/'}= Blog.title
 				%p= "by #{Blog.author}"
-		%div#content
+		#content
 			- posts.each do |post|
-				%div.post
+				.post
 					%p.date
 						=post[:created_at].strftime("%b")
 						%b=post[:created_at].strftime("%d")
@@ -24,7 +24,7 @@
 							= post.linked_tags
 							- if Blog.disqus_shortname
 								%a{:href => "#{post.url}#disqus_thread"} comments	
-					%div.entry
+					.entry
 						= post.summary_html
 						- if post.more?
 							%a{:href => post.url} Continue reading
@@ -37,10 +37,10 @@
 						%a{:href => 'posts/new'} create a post
 
 			- else
-				%div#older_posts
+				#older_posts
 					%a{:href => '/post'} Archive
 			- if admin?
-				%div#new_post
+				#new_post
 					%a{:href => '/posts/new'} New post
 		- if Blog.disqus_shortname
 			:javascript
@@ -55,7 +55,7 @@
 					document.write('<script type="text/javascript" src="http://disqus.com/forums/#{Blog.disqus_shortname}/get_num_replies.js' + query + '"></' + 'script>');
 					})();
 		
-		%div#footer
+		#footer
 			%p#legal
 				="Content by #{Blog.author} | Design adapted from "
 				%a{:href => 'http://www.freecsstemplates.org/preview/replenish'} Replenish

@@ -1,6 +1,6 @@
 %h1= "Posts tagged #{tag}"
 - posts.each do |post|
-	%div.post
+	.post
 		%p.date
 			= post[:created_at].strftime("%b")
 			%b= post[:created_at].strftime("%d")
@@ -10,7 +10,7 @@
 			%small
 				= post.linked_tags + " | "
 				%a(href = "#{post.url}#disqus_thread") comments
-		%div.entry
+		.entry
 			= post.summary_html
 			- if post.more? 
 				%a{:href => post.url} Continue reading
