@@ -1,3 +1,5 @@
+# Port to HAML/SASS vs ERB by rwboyer@mac.com
+
 %w( rubygems sinatra/base haml ).each { |f| require f }
 
 $LOAD_PATH.unshift File.dirname(__FILE__) + '/vendor/sequel'
