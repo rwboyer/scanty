@@ -1,4 +1,5 @@
 # Port to HAML/SASS vs ERB by rwboyer@mac.com
+# another comment
 
 %w( rubygems sinatra/base haml ).each { |f| require f }
 
