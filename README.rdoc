@@ -8,6 +8,8 @@ http://adam.blog.heroku.com
 It is not a blogging engine, but it's small and easy to modify, so it could be
 the starting point for your blog, too.
 
+RB - converted view templates to use HAML/SASS vs ERB 
+
 == Features
 
 * Posts (shock!)
